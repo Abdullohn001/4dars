@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-300 shadow-xl rounded-lg ">
+    <div className="navbar bg-base-300 shadow-xl rounded-lg w-[1200px] ml-auto mr-auto place-items-center">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -31,7 +31,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">List</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -40,7 +40,9 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar-center">
-        <Link to="/" className="btn btn-ghost text-xl">React Dom</Link>
+        <Link to="/" className="btn btn-ghost text-xl">
+          React Dom
+        </Link>
       </div>
       <div className="navbar-end">
         <button className="btn mr-[10px] btn-ghost btn-circle">
