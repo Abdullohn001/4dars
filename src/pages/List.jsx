@@ -9,12 +9,11 @@ function List() {
   } = useFetch(
     "https://online-json-server-api.up.railway.app/project/6677cd551d2cd3eb1143edd6/articles"
   );
-  console.log(articles);
 
   return (
     <div>
       {isPending && (
-        <div className="w-full h-lvh flex justify-center pt-12">
+        <div className="w-[500px] ml-auto mr-auto  h-lvh flex justify-center pt-12">
           <h3 className="text-3xl font-semibold">Loading...</h3>
         </div>
       )}
@@ -23,7 +22,7 @@ function List() {
         articles.data.map((article) => {
           return (
             <div
-              className="w-full py-10 px-5 rounded-sm  mb-5 shadow-xl hover:shadow-md"
+              className="ml-auto mr-auto  w-[500px] text-center py-10 px-5 rounded-sm  mb-5 shadow-xl "
               key={article.id}
             >
               <h3 className="font-bold mb-5">Title: {article.title}</h3>
