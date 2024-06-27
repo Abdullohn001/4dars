@@ -6,9 +6,12 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import ErrorPage from "./pages/ErrorPage";
+import List from "./pages/List";
+import ListAbout from "./pages/ListAbout";
 
 //layuts
 import RootLayout from "./layout/RootLayout";
+import ListLayout from "./layout/ListLayout";
 
 
 const App = () => {
@@ -28,7 +31,17 @@ const App = () => {
         },
         {
           path: "/contact",
-          element: <Contact />,
+          element: <ListLayout />,
+          children: [
+            {
+              index: true,
+              element: <List />,
+            },
+            {
+              path: ":id",
+              element: <ListAbout />,
+            },
+          ],
         },
       ],
     },
